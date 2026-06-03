@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
@@ -91,6 +92,14 @@ export default function Pathways() {
 
   return (
     <div className="min-h-screen text-foreground font-sans bg-background">
+      <Helmet>
+        <title>Coaching Pathways | Forward 41</title>
+        <meta name="description" content="Choose your Forward 41 coaching pathway — Break Free, Break Through, or Become. Private coaching sessions designed to help you move forward with clarity and purpose." />
+        <meta property="og:title" content="Coaching Pathways | Forward 41" />
+        <meta property="og:description" content="Choose your Forward 41 coaching pathway — Break Free, Break Through, or Become. Private coaching sessions designed to help you move forward with clarity and purpose." />
+        <meta name="twitter:title" content="Coaching Pathways | Forward 41" />
+        <meta name="twitter:description" content="Choose your Forward 41 coaching pathway — Break Free, Break Through, or Become. Private coaching sessions designed to help you move forward with clarity and purpose." />
+      </Helmet>
       <ScrollWidgets />
       <Nav />
 
