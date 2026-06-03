@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import ContactForm from "../components/ContactForm";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
@@ -8,47 +7,60 @@ const fadeIn = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
+const bullets = [
+  "Free 30-minute discovery call",
+  "Explore which pathway fits best",
+  "Ask questions before choosing",
+  "No pressure or commitment",
+];
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
 
       <section className="py-32 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+        <div className="max-w-2xl mx-auto text-center">
           <motion.div
-            className="flex-1 space-y-6"
+            className="space-y-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <p className="text-sm font-bold tracking-widest text-primary uppercase">Let's Connect</p>
-            <h2 className="font-serif text-5xl md:text-6xl leading-tight">Book a Discovery Call</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
-              Ready to take the first step toward a more fulfilling life? Reach out and I will personally get back to you to schedule a free discovery call.
+            <p className="text-sm font-bold tracking-widest text-primary uppercase">Discovery Call</p>
+
+            <h1 className="font-serif text-5xl md:text-6xl leading-tight">
+              Book a discovery call
+            </h1>
+
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              Ready to explore whether private coaching is the right next step?
+              <br /><br />
+              Book a free 30-minute discovery call to talk through where you are, what feels stuck, and which Forward 41 pathway may fit best.
+              <br /><br />
+              No pressure. No commitment. Just a clear conversation about your next step.
             </p>
-            <div className="space-y-3 pt-2">
-              {[
-                "Free 30-minute discovery call",
-                "No commitment required",
-                "Tailored to your specific goals",
-              ].map((item) => (
+
+            <div className="flex flex-col items-center gap-3 pt-2">
+              {bullets.map((item) => (
                 <div key={item} className="flex items-center gap-3 text-muted-foreground">
                   <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                   {item}
                 </div>
               ))}
             </div>
-          </motion.div>
 
-          <motion.div
-            className="flex-1 w-full"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <ContactForm />
+            <div className="pt-4">
+              <a
+                href="https://calendly.com/forward41"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-foreground text-background px-10 py-4 text-base font-medium tracking-wide hover:opacity-80 transition-opacity"
+              >
+                Book a Free Call
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
