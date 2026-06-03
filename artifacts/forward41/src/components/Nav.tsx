@@ -12,17 +12,17 @@ export default function Nav() {
     setMenuOpen(false);
   };
 
-  const scrollTo = (id: string) => {
+  const goBookCall = () => {
     setMenuOpen(false);
-    if (location !== "/") {
-      setLocation("/");
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    } else {
-      const el = document.getElementById(id);
+    if (location === "/pathways") {
+      const el = document.getElementById("discovery-call");
       if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      setLocation("/pathways");
+      setTimeout(() => {
+        const el = document.getElementById("discovery-call");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 120);
     }
   };
 
@@ -43,7 +43,6 @@ export default function Nav() {
     { label: "Meet Sarah", action: () => { setLocation("/meet-sarah"); setMenuOpen(false); }, activePath: "/meet-sarah" },
     { label: "Coaching Programs", action: () => { setLocation("/coaching-programs"); setMenuOpen(false); }, activePath: "/coaching-programs" },
     { label: "Coaching Pathways", action: () => { setLocation("/pathways"); setMenuOpen(false); }, activePath: "/pathways" },
-    { label: "Contact", action: () => { setLocation("/contact"); setMenuOpen(false); }, activePath: "/contact" },
   ];
 
   const isActive = (activePath: string | null) => {
@@ -56,7 +55,7 @@ export default function Nav() {
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md z-50 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-        {/* Logo — natural proportions, no stretch */}
+        {/* Logo */}
         <button onClick={goHome} className="flex items-center flex-shrink-0 focus:outline-none" aria-label="Forward 41 home">
           <img
             src={logoImg}
@@ -91,7 +90,7 @@ export default function Nav() {
             data-testid="button-nav-book"
             className="bg-primary text-primary-foreground px-6 py-2.5 rounded-sm hover:bg-primary/90 transition-colors text-sm tracking-wide"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
-            onClick={() => { setLocation("/contact"); setMenuOpen(false); }}
+            onClick={goBookCall}
           >
             Book a Call
           </button>
@@ -132,7 +131,7 @@ export default function Nav() {
           <button
             className="mt-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm hover:bg-primary/90 transition-colors text-center text-sm tracking-wide"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
-            onClick={() => { setLocation("/contact"); setMenuOpen(false); }}
+            onClick={goBookCall}
           >
             Book a Call
           </button>
