@@ -96,13 +96,15 @@ export default function MeetSarah() {
               >
                 View Coaching Pathways <ChevronRight className="w-4 h-4" />
               </Link>
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/forward41"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border border-foreground/25 text-foreground px-6 py-3 rounded-sm text-sm font-bold tracking-wide hover:border-foreground/50 hover:bg-foreground/5 transition-colors"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 Book a Call <ChevronRight className="w-4 h-4" />
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -348,13 +350,15 @@ export default function MeetSarah() {
               >
                 View Coaching Pathways <ChevronRight className="w-4 h-4" />
               </Link>
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/forward41"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border border-white/40 text-white px-6 py-3 rounded-sm text-sm font-bold tracking-wide hover:border-white/70 hover:bg-white/10 transition-colors"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 Book a Call <ChevronRight className="w-4 h-4" />
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </div>
