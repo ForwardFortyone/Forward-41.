@@ -37,7 +37,6 @@ const plans = [
     price: "$150",
     description: "A focused 75-minute coaching session to help you pause, untangle what feels stuck, and leave with clearer next steps.",
     bestFor: "Specific decisions, emotional blocks, self-doubt, overwhelm, or moments of uncertainty.",
-    button: "Book This Pathway",
     popular: false,
     includes: [
       "75-minute private coaching session",
@@ -52,7 +51,6 @@ const plans = [
     price: "$410",
     description: "A structured coaching journey to help you move beyond old patterns, rebuild confidence, and create practical forward movement.",
     bestFor: "Feeling stuck, navigating change, rebuilding confidence, or wanting guided support over time.",
-    button: "Book This Pathway",
     popular: true,
     includes: [
       "4 × 60-minute private coaching sessions",
@@ -68,7 +66,6 @@ const plans = [
     price: "$650",
     description: "A deeper coaching journey for meaningful growth, renewed direction, and becoming more aligned with the person you are ready to be.",
     bestFor: "Bigger transitions, identity shifts, long-term growth, confidence, purpose, and personal transformation.",
-    button: "Book This Pathway",
     popular: false,
     includes: [
       "6 × 60-minute private coaching sessions",
@@ -81,11 +78,16 @@ const plans = [
   },
 ];
 
+const discoveryCallBullets = [
+  "Free 30-minute discovery call",
+  "Explore which pathway fits best",
+  "Ask questions before choosing",
+  "No pressure or commitment",
+];
+
 export default function Pathways() {
   const [, setLocation] = useLocation();
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  const goContact = () => setLocation("/contact");
 
   return (
     <div className="min-h-screen text-foreground font-sans bg-background">
@@ -156,7 +158,7 @@ export default function Pathways() {
       </section>
 
       {/* Pathways Cards */}
-      <section id="pathways-section" className="pb-28 px-6 bg-[#f9f7f4] pt-20">
+      <section id="pathways-section" className="pb-20 px-6 bg-[#f9f7f4] pt-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-stretch">
           {plans.map((plan, i) => (
             <motion.div
@@ -202,32 +204,56 @@ export default function Pathways() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{plan.bestFor}</p>
               </div>
 
-              <button
-                className="w-full py-4 rounded-sm font-medium tracking-wide transition-colors bg-primary text-primary-foreground hover:bg-primary/90"
-                onClick={goContact}
+              <a
+                href="https://forms.gle/1uFoeRuMvBjDpNfp6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 rounded-sm font-medium tracking-wide transition-colors bg-primary text-primary-foreground hover:bg-primary/90 text-center block"
               >
-                {plan.button}
-              </button>
+                Start This Pathway
+              </a>
             </motion.div>
           ))}
         </div>
+      </section>
 
-        <motion.p
-          className="text-center text-muted-foreground mt-14 text-base leading-relaxed max-w-xl mx-auto"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+      {/* Discovery Call Section */}
+      <section id="discovery-call" className="py-24 px-6 bg-[#f9f7f4] border-t border-border/40">
+        <motion.div
+          className="max-w-2xl mx-auto text-center space-y-7"
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          variants={fadeIn}
         >
-          Not sure where to start?{" "}
-          <button
-            className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
-            onClick={goContact}
-          >
-            Book a free discovery call
-          </button>{" "}
-          and we'll help you choose the pathway that fits where you are right now.
-        </motion.p>
+          <h2 className="font-serif text-4xl md:text-5xl leading-tight">
+            Not sure which pathway is right for you?
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Book a free 30-minute discovery call to talk through where you are, what feels stuck, and which Forward 41 pathway may fit best.
+            <br /><br />
+            No pressure. No commitment. Just a clear conversation about your next step.
+          </p>
+          <div className="flex flex-col items-center gap-3 pt-1">
+            {discoveryCallBullets.map((item) => (
+              <div key={item} className="flex items-center gap-3 text-muted-foreground">
+                <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: "#52796F" }} />
+                {item}
+              </div>
+            ))}
+          </div>
+          <div className="pt-2">
+            <a
+              href="https://calendly.com/forward41"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-10 py-4 text-white text-sm font-semibold tracking-wide rounded-sm hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: "#52796F" }}
+            >
+              Book a Free Discovery Call
+            </a>
+          </div>
+        </motion.div>
       </section>
 
       {/* Testimonials */}
@@ -276,12 +302,14 @@ export default function Pathways() {
           <p className="text-white/70 text-lg leading-relaxed">
             Book a free 30-minute discovery call to find out which pathway is right for you.
           </p>
-          <button
+          <a
+            href="https://calendly.com/forward41"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-[#2f3e46] px-10 py-4 rounded-sm text-sm font-bold tracking-wide hover:bg-white/90 transition-colors mt-2"
-            onClick={goContact}
           >
             Book a Free Call <ChevronRight className="w-4 h-4" />
-          </button>
+          </a>
         </motion.div>
       </section>
 
