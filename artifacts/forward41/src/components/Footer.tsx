@@ -9,7 +9,6 @@ export default function Footer() {
     { label: "Meet Sarah", path: "/meet-sarah" },
     { label: "Coaching Programs", path: "/coaching-programs" },
     { label: "Coaching Pathways", path: "/pathways" },
-    { label: "Contact", path: "/contact" },
   ];
 
   return (
