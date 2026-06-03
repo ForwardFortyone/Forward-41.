@@ -205,7 +205,7 @@ export default function Pathways() {
               </div>
 
               <a
-                href="https://forms.gle/1uFoeRuMvBjDpNfp6"
+                href="https://forms.gle/Mbe9AFjqEPLcrtSK9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-sm font-medium tracking-wide transition-colors bg-primary text-primary-foreground hover:bg-primary/90 text-center block"
