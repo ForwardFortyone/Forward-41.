@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { useLocation, Link } from "wouter";
@@ -33,6 +34,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen text-foreground font-sans">
+      <Helmet>
+        <title>Forward 41 | Break Free. Break Through. Become.</title>
+        <meta name="description" content="Forward 41 offers coaching programs and private coaching pathways to help you move through stuckness, build clarity, and take intentional steps toward meaningful change." />
+        <meta property="og:title" content="Forward 41 | Coaching for Clarity, Confidence, and Change" />
+        <meta property="og:description" content="Explore Forward 41 coaching programs, private coaching pathways, and resources designed to help you reflect, reset, and move forward with purpose." />
+        <meta name="twitter:title" content="Forward 41 | Coaching for Clarity, Confidence, and Change" />
+        <meta name="twitter:description" content="Explore Forward 41 coaching programs, private coaching pathways, and resources designed to help you reflect, reset, and move forward with purpose." />
+      </Helmet>
       <ScrollWidgets />
       <NeuralBackground />
 
