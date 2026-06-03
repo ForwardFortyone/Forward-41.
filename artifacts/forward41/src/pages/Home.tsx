@@ -7,7 +7,6 @@ import lifeAuditImg from "@assets/ChatGPT_Image_Jun_2,_2026,_07_09_28_PM_1780420
 import NeuralBackground from "../components/NeuralBackground";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import ContactForm from "../components/ContactForm";
 import Testimonials from "../components/Testimonials";
 import ScrollWidgets from "../components/ScrollWidgets";
 
@@ -17,10 +16,19 @@ const fadeIn = {
 };
 
 export default function Home() {
-  const [, setLocation] = useLocation();
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+  const [location, setLocation] = useLocation();
+
+  const goBookCall = () => {
+    if (location === "/pathways") {
+      const el = document.getElementById("discovery-call");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      setLocation("/pathways");
+      setTimeout(() => {
+        const el = document.getElementById("discovery-call");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 120);
+    }
   };
 
   return (
@@ -49,13 +57,13 @@ export default function Home() {
             <button
               data-testid="button-hero-book"
               className="bg-primary text-primary-foreground px-10 py-4 rounded-sm text-lg hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
-              onClick={() => scrollTo('contact')}
+              onClick={goBookCall}
             >
               Book a Call <ChevronRight className="w-5 h-5" />
             </button>
             <button
               className="text-primary font-medium hover:underline inline-flex items-center gap-1 text-lg"
-              onClick={() => scrollTo('meet-sarah')}
+              onClick={() => { const el = document.getElementById('meet-sarah'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }}
             >
               Meet Sarah <ChevronRight className="w-4 h-4" />
             </button>
@@ -261,7 +269,7 @@ export default function Home() {
               title: "Private Coaching",
               desc: "Experience personalized coaching sessions tailored to your needs, focus on your potential, conquer limiting beliefs, and work toward your goals and achieving fulfillment",
               buttonText: "Book a Call",
-              buttonLink: "/contact"
+              buttonLink: "/pathways"
             },
             {
               title: "Coaching Pathways",
@@ -318,7 +326,6 @@ export default function Home() {
               price: "$150",
               description: "A focused 75-minute coaching session to help you pause, untangle what feels stuck, and leave with clearer next steps.",
               bestFor: "Specific decisions, emotional blocks, self-doubt, overwhelm, or moments of uncertainty.",
-              button: "Book Break Free",
               popular: false,
             },
             {
@@ -327,7 +334,6 @@ export default function Home() {
               price: "$410",
               description: "A structured coaching journey to help you move beyond old patterns, rebuild confidence, and create practical forward movement.",
               bestFor: "Feeling stuck, navigating change, rebuilding confidence, or wanting guided support over time.",
-              button: "Book Break Through",
               popular: true,
             },
             {
@@ -336,7 +342,6 @@ export default function Home() {
               price: "$650",
               description: "A deeper coaching journey for meaningful growth, renewed direction, and becoming more aligned with the person you are ready to be.",
               bestFor: "Bigger transitions, identity shifts, long-term growth, confidence, purpose, and personal transformation.",
-              button: "Book Become",
               popular: false,
             },
           ].map((plan, i) => (
@@ -369,13 +374,15 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{plan.bestFor}</p>
               </div>
 
-              <button
-                className="w-full py-4 rounded-sm font-medium tracking-wide transition-colors bg-primary text-primary-foreground hover:bg-primary/90"
-                onClick={() => scrollTo('contact')}
+              <a
+                href="https://forms.gle/Mbe9AFjqEPLcrtSK9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 rounded-sm font-medium tracking-wide transition-colors bg-primary text-primary-foreground hover:bg-primary/90 text-center block"
                 data-testid={`button-pathway-${i}`}
               >
-                {plan.button}
-              </button>
+                Start This Pathway
+              </a>
             </motion.div>
           ))}
         </div>
@@ -390,7 +397,7 @@ export default function Home() {
           Not sure where to start?{" "}
           <button
             className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
-            onClick={() => scrollTo('contact')}
+            onClick={goBookCall}
           >
             Book a free discovery call
           </button>{" "}
@@ -423,49 +430,6 @@ export default function Home() {
       </section>
 
       <Testimonials />
-
-      {/* Book a Call / Contact Form */}
-      <section className="py-24 px-6" id="contact">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
-          {/* Left: copy */}
-          <motion.div
-            className="flex-1 space-y-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <p className="text-sm font-bold tracking-widest text-primary uppercase">Let's Connect</p>
-            <h2 className="font-serif text-5xl md:text-6xl leading-tight">Book a discovery call</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
-              Ready to take the first step toward a more fulfilling life? Reach out and I will personally get back to you to schedule a free discovery call.
-            </p>
-            <div className="space-y-3 pt-2">
-              {[
-                "Free 30-minute discovery call",
-                "No commitment required",
-                "Tailored to your specific goals",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3 text-muted-foreground">
-                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Right: form */}
-          <motion.div
-            className="flex-1 w-full"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
-            <ContactForm />
-          </motion.div>
-        </div>
-      </section>
 
       <Footer />
     </div>
