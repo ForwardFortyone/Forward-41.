@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { Link } from "wouter";
@@ -42,6 +43,14 @@ const expectations = [
 export default function MeetSarah() {
   return (
     <div className="min-h-screen bg-background font-sans">
+      <Helmet>
+        <title>Meet Sarah | Forward 41</title>
+        <meta name="description" content="Meet Sarah Johnson, founder of Forward 41 — a life coach helping people move through stuckness, self-doubt, and transition with clarity, confidence, and purpose." />
+        <meta property="og:title" content="Meet Sarah Johnson | Forward 41" />
+        <meta property="og:description" content="Meet Sarah Johnson, founder of Forward 41 — a life coach helping people move through stuckness, self-doubt, and transition with clarity, confidence, and purpose." />
+        <meta name="twitter:title" content="Meet Sarah Johnson | Forward 41" />
+        <meta name="twitter:description" content="Meet Sarah Johnson, founder of Forward 41 — a life coach helping people move through stuckness, self-doubt, and transition with clarity, confidence, and purpose." />
+      </Helmet>
       <Nav />
       <ScrollWidgets />
 
