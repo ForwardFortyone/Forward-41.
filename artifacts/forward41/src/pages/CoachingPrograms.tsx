@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
@@ -92,6 +93,14 @@ export default function CoachingPrograms() {
 
   return (
     <div className="min-h-screen text-foreground font-sans bg-background">
+      <Helmet>
+        <title>Coaching Programs | Forward 41</title>
+        <meta name="description" content="Explore the Forward 41 I AM Series — six self-paced coaching programs designed to build clarity, confidence, and meaningful change in your life." />
+        <meta property="og:title" content="Coaching Programs | Forward 41" />
+        <meta property="og:description" content="Explore the Forward 41 I AM Series — six self-paced coaching programs designed to build clarity, confidence, and meaningful change in your life." />
+        <meta name="twitter:title" content="Coaching Programs | Forward 41" />
+        <meta name="twitter:description" content="Explore the Forward 41 I AM Series — six self-paced coaching programs designed to build clarity, confidence, and meaningful change in your life." />
+      </Helmet>
       <ScrollWidgets />
       <Nav />
 
