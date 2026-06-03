@@ -1,0 +1,89 @@
+Please redesign the Meet Sarah page so it feels warmer, more premium, personal, and aligned with the Forward 41 brand.
+
+The current page feels too plain and template-like. Keep the same core content themes, but improve the layout, flow, and visual presence.
+
+Please also replace the current Meet Sarah photo with the new coffee photo I uploaded. Crop it as a warm portrait image, focusing on Sarah’s face and natural expression. It is okay if the coffee cup is partly visible, but the focus should be on Sarah. Avoid awkward cropping of the face. Use rounded corners or a soft editorial image frame so the photo feels integrated with the page design. Apply a subtle warm/neutral treatment if needed so it aligns with the Forward 41 palette, but do not over-filter it.
+
+New page structure:
+
+1. Hero section
+
+Use a two-column layout:
+- Left: heading, intro copy, and buttons
+- Right: Sarah’s portrait photo
+
+Heading:
+Meet Sarah
+
+Subheading:
+Founder of Forward 41 and coach helping people move through stuckness, self-doubt, and transition with clarity, confidence, and purpose.
+
+Intro text:
+Forward 41 was created for people who are ready to pause, reflect, and begin moving forward with more intention. My work is about helping you see what feels stuck, understand the patterns shaping your current season, and take clearer steps toward the life you are ready to build.
+
+Buttons:
+View Coaching Pathways → /coaching-pathways
+Book a Call → /contact
+
+2. Story section
+
+Heading:
+Why Forward 41 Exists
+
+Text:
+Forward 41 was created from a simple belief: change becomes possible when people are given the space, support, and structure to see themselves clearly and take the next step forward.
+
+I know how powerful it can be to pause, reflect, and begin again with intention. My work is about helping people move through stuckness, self-doubt, transition, and uncertainty so they can reconnect with who they are, what matters to them, and the life they are ready to build.
+
+3. Approach section
+
+Heading:
+My Approach
+
+Use three small cards:
+
+Reflect
+Create space to pause, think clearly, and understand what is really going on beneath the surface.
+
+Reframe
+Identify the beliefs, patterns, and choices that may be keeping you stuck.
+
+Rebuild
+Take practical, intentional steps toward clarity, confidence, and forward movement.
+
+4. What You Can Expect section
+
+Heading:
+What It Feels Like to Work With Me
+
+Include:
+- Supportive, honest conversations
+- Practical reflection, not surface-level motivation
+- Space to untangle what feels stuck
+- Tools and action steps you can apply in real life
+- A calm, structured approach to personal growth
+
+5. Background section
+
+Heading:
+A Thoughtful, Structured Way Forward
+
+Text:
+With a background in psychology, coaching, and personal development, I bring a thoughtful and structured approach to helping people grow with clarity and confidence.
+
+6. Final CTA section
+
+Heading:
+Ready to Move Forward?
+
+Text:
+Explore the Forward 41 coaching pathways or book a call to find the right starting point for you.
+
+Buttons:
+View Coaching Pathways → /coaching-pathways
+Book a Call → /contact
+
+Design direction:
+Make the page feel calm, warm, premium, personal, and editorial. Use more visual breathing room, soft section backgrounds, elegant headings, and the Forward 41 brand colours. The photo should feel integrated into the design, not dropped into the page. Keep the page human and approachable, not corporate.
+
+Please keep “Break Free. Break Through. Become.” as the overall brand promise, but do not force it into the My Approach cards. The approach cards should remain Reflect, Reframe, and Rebuild.

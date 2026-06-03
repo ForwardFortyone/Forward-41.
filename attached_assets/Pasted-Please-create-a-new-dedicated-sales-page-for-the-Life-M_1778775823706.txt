@@ -1,0 +1,100 @@
+Please create a new dedicated sales page for the Life Mastery Coaching Program on the Forward 41 website.
+
+This should replace the current external link to:
+https://solife.systeme.io/life-mastery-coaching-program
+
+When someone clicks the Life Mastery Coaching Program button, it should take them to a new internal page:
+/life-mastery
+
+Important:
+This is not a 1:1 coaching offer. It is a self-paced online coaching program that people purchase and receive access to. Please make sure the wording does not describe it as private coaching or one-on-one coaching.
+
+Create a premium Forward 41 sales page inspired by the structure of the existing Systeme page, but do not copy the design or wording exactly. Rewrite it in the Forward 41 tone: calm, clear, empowering, elegant, and professional.
+
+Page structure:
+
+1. Hero section
+Title: Life Mastery Coaching Program
+Subtitle: Break Free. Break Through. Become.
+Headline: A self-paced online coaching program to help you gain clarity, shift limiting patterns, and move forward with confidence.
+CTA button: Get Access
+
+2. Intro section
+Explain that the program gives users practical tools, guided exercises, and reflective prompts to help them reconnect with themselves, build confidence, and take meaningful action.
+
+3. Problem section
+Heading: If you feel stuck, uncertain, or disconnected from the life you want, this program was designed for you.
+Include points around:
+- feeling stuck or unfulfilled
+- struggling with self-doubt
+- lacking clarity or direction
+- procrastinating on goals
+- feeling overwhelmed by change
+- wanting more confidence and purpose
+
+4. Transformation section
+Heading: What Life Mastery Helps You Build
+Include:
+- clarity and direction
+- confidence and self-belief
+- resilience and emotional steadiness
+- practical goal-setting
+- aligned action
+- stronger personal boundaries
+- a renewed sense of purpose
+
+5. What’s Included section
+Heading: What You’ll Receive
+Include:
+- self-paced online coaching program
+- guided coaching exercises
+- practical reflection tools
+- short teaching videos
+- downloadable worksheets
+- step-by-step instructions
+- flexible access so users can move at their own pace
+- optional one-on-one coaching add-on, if available
+
+6. Program content section
+Heading: Inside the Program
+Create 8 module cards:
+Module 1: Get Clear
+Module 2: Know What Matters
+Module 3: Break Limiting Patterns
+Module 4: Build Confidence
+Module 5: Take Aligned Action
+Module 6: Strengthen Your Habits
+Module 7: Move Through Resistance
+Module 8: Create Your Forward Plan
+
+7. Pricing section
+Heading: Get Access to Life Mastery
+Show:
+Price: $197 
+Include a note:
+Instant access. Complete the program at your own pace.
+
+CTA button: Get Access
+
+8. Guarantee section
+Heading: 30-Day Money-Back Guarantee
+Text: Try the program for 30 days. If it is not the right fit, you can request a refund within the guarantee period.
+
+9. FAQ section
+Include FAQs:
+- Is this one-on-one coaching?
+Answer: No, this is a self-paced online coaching program. Optional one-on-one support may be available separately.
+- How long do I have access?
+- How much time do I need each week?
+- Is this suitable if I am new to personal development?
+- Do I need to complete it in 8 weeks?
+- Is there a refund policy?
+- Can I add private coaching support?
+
+10. Final CTA section
+Heading: Ready to move forward?
+Text: Life Mastery gives you the tools and structure to stop circling the same patterns and begin creating clearer, more confident forward movement.
+Button: Get Access
+
+Design direction:
+Use the Forward 41 brand style. Keep it premium, calm, warm, spacious, and professional. Use soft sections, elegant typography, clear CTA buttons, and subtle background imagery. Do not make it look like a loud sales funnel page.

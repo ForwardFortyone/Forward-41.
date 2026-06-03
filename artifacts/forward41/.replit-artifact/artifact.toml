@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Forward 41"
+version = "1.0.0"
+id = "artifacts/forward41"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25084
+
+[services.development]
+run = "pnpm --filter @workspace/forward41 run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/forward41", "run", "build" ]
+publicDir = "artifacts/forward41/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25084"
+BASE_PATH = "/"

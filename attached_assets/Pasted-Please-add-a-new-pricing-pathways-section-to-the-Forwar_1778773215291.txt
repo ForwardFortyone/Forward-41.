@@ -1,0 +1,45 @@
+Please add a new pricing/pathways section to the Forward 41 homepage.
+
+Place it after the existing section that introduces Coaching Programs, One-on-one Coaching, and Online Courses, and before the section titled “Nothing Will Change If You Don’t Change.”
+
+Section title:
+Choose Your Forward 41 Pathway
+
+Subtitle:
+Break Free. Break Through. Become.
+
+Intro text:
+Whether you need one focused conversation or a deeper coaching journey, each pathway is designed to meet you where you are and help you move forward with clarity, confidence, and purpose.
+
+Create three premium pricing cards:
+
+Card 1:
+Title: Break Free
+Label: Single Session
+Price: $150
+Description: A focused 75-minute coaching session to help you pause, untangle what feels stuck, and leave with clearer next steps.
+Best for: Specific decisions, emotional blocks, self-doubt, overwhelm, or moments of uncertainty.
+Button: Book Break Free
+
+Card 2:
+Title: Break Through
+Label: 4-Session Journey
+Price: $410
+Description: A structured coaching journey to help you move beyond old patterns, rebuild confidence, and create practical forward movement.
+Best for: Feeling stuck, navigating change, rebuilding confidence, or wanting guided support over time.
+Button: Start Break Through
+Add a small “Most Popular” label to this card.
+
+Card 3:
+Title: Become
+Label: 6-Session Journey
+Price: $650
+Description: A deeper coaching journey for meaningful growth, renewed direction, and becoming more aligned with the person you are ready to be.
+Best for: Bigger transitions, identity shifts, long-term growth, confidence, purpose, and personal transformation.
+Button: Begin Become
+
+Below the cards, add this line:
+Not sure where to start? Book a free discovery call and we’ll help you choose the pathway that fits where you are right now.
+
+Design direction:
+The section should feel calm, premium, warm, elegant, and spacious. Use three cards in a row on desktop and stacked cards on mobile. Keep the pricing clear, the wording readable, and the calls to action gentle but confident.
