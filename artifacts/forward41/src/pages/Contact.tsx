@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
@@ -16,24 +15,14 @@ const bullets = [
 ];
 
 export default function Contact() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
       <Nav />
 
-      <section className="py-24 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-32 px-6">
+        <div className="max-w-2xl mx-auto text-center">
           <motion.div
-            className="space-y-7"
+            className="space-y-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -53,7 +42,7 @@ export default function Contact() {
               No pressure. No commitment. Just a clear conversation about your next step.
             </p>
 
-            <div className="flex flex-col items-center gap-3 pt-2 pb-4">
+            <div className="flex flex-col items-center gap-3 pt-2">
               {bullets.map((item) => (
                 <div key={item} className="flex items-center gap-3 text-muted-foreground">
                   <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
@@ -61,14 +50,18 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-          </motion.div>
 
-          {/* Calendly inline widget */}
-          <div
-            className="calendly-inline-widget w-full rounded-sm overflow-hidden"
-            data-url="https://calendly.com/forward41"
-            style={{ minWidth: 320, height: 700 }}
-          />
+            <div className="pt-4">
+              <a
+                href="https://calendly.com/forward41"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-foreground text-background px-10 py-4 text-base font-medium tracking-wide hover:opacity-80 transition-opacity"
+              >
+                Book a Free Call
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
