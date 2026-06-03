@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
@@ -17,6 +18,14 @@ const bullets = [
 export default function Contact() {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Book a Discovery Call | Forward 41</title>
+        <meta name="description" content="Book a free 30-minute discovery call with Sarah Johnson at Forward 41. A clear conversation about where you are and which coaching pathway fits best." />
+        <meta property="og:title" content="Book a Discovery Call | Forward 41" />
+        <meta property="og:description" content="Book a free 30-minute discovery call with Sarah Johnson at Forward 41. A clear conversation about where you are and which coaching pathway fits best." />
+        <meta name="twitter:title" content="Book a Discovery Call | Forward 41" />
+        <meta name="twitter:description" content="Book a free 30-minute discovery call with Sarah Johnson at Forward 41. A clear conversation about where you are and which coaching pathway fits best." />
+      </Helmet>
       <Nav />
 
       <section className="py-32 px-6">
