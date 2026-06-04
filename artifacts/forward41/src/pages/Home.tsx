@@ -266,30 +266,24 @@ export default function Home() {
           <h2 className="font-serif text-5xl">Choose how you want to move forward</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {[
             {
               title: "Coaching Programs",
-              desc: "Transform your life with expert coaching models, real-world strategies, and invaluable tools to achieve your goals and find fulfilling success and achievement",
+              desc: "Explore the six I AM coaching programs, each designed to help you grow in a specific area of your life, from clarity and focus to balance, alignment, consistency, and momentum.",
               buttonText: "Explore Programs",
               buttonLink: "/coaching-programs"
             },
             {
-              title: "Private Coaching",
-              desc: "Experience personalized coaching sessions tailored to your needs, focus on your potential, conquer limiting beliefs, and work toward your goals and achieving fulfillment",
-              buttonText: "Book a Call",
-              buttonLink: "/pathways"
-            },
-            {
               title: "Coaching Pathways",
-              desc: "Choose a private coaching journey — one focused session or a deeper multi-session experience designed to move you forward with clarity and confidence",
-              buttonText: "View Pathways",
+              desc: "Choose a private coaching pathway designed to meet you where you are, whether you need one focused session or a deeper multi-session journey.",
+              buttonText: "View Coaching Pathways",
               buttonLink: "/pathways"
             }
           ].map((service, i) => (
-            <motion.div 
+            <motion.div
               key={i}
-              className="bg-white border border-border p-8 rounded-sm hover:shadow-xl transition-shadow flex flex-col h-full"
+              className="bg-white border border-border p-10 rounded-sm hover:shadow-xl transition-shadow flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
