@@ -103,38 +103,71 @@ export default function Nav() {
           aria-label="Toggle menu"
           data-testid="button-nav-mobile-toggle"
         >
-          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <div className="md:hidden bg-background border-t border-border px-6 py-6 flex flex-col gap-5 shadow-lg">
-          {navLinks.map((link) => {
-            const active = isActive(link.activePath);
-            return (
-              <button
-                key={link.label}
-                onClick={link.action}
-                className={[
-                  "text-left transition-colors py-1 border-b-2 text-sm tracking-wide",
-                  active
-                    ? "text-primary border-primary"
-                    : "border-transparent hover:text-primary",
-                ].join(" ")}
-                style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500 }}
-              >
-                {link.label}
-              </button>
-            );
-          })}
-          <button
-            className="mt-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm hover:bg-primary/90 transition-colors text-center text-sm tracking-wide"
-            style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
-            onClick={goBookCall}
-          >
-            Book a Call
-          </button>
+        <div className="md:hidden bg-background border-t border-border shadow-md">
+          <div className="px-7 pt-4 pb-6 flex flex-col">
+
+            {/* Nav links */}
+            {navLinks.map((link) => {
+              const active = isActive(link.activePath);
+              return (
+                <button
+                  key={link.label}
+                  onClick={link.action}
+                  className="text-left py-3 transition-colors focus:outline-none"
+                  style={{
+                    fontFamily: "'Montserrat', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "0.875rem",
+                    letterSpacing: "0.025em",
+                    color: active ? "#52796F" : "#2F3E46",
+                  }}
+                >
+                  {/* Underline scoped to text width only */}
+                  <span
+                    style={{
+                      display: "inline-block",
+                      borderBottom: active ? "2px solid #52796F" : "2px solid transparent",
+                      paddingBottom: "2px",
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {link.label}
+                  </span>
+                </button>
+              );
+            })}
+
+            {/* Divider */}
+            <div className="mt-2 mb-4 border-t border-border/50" />
+
+            {/* Book a Call — intentional width, not full-bleed */}
+            <button
+              onClick={goBookCall}
+              style={{
+                fontFamily: "'Montserrat', sans-serif",
+                fontWeight: 600,
+                fontSize: "0.875rem",
+                letterSpacing: "0.05em",
+                backgroundColor: "#52796F",
+                color: "#ffffff",
+                padding: "12px 32px",
+                borderRadius: "2px",
+                alignSelf: "flex-start",
+                transition: "opacity 0.15s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.88")}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+            >
+              Book a Call
+            </button>
+
+          </div>
         </div>
       )}
     </nav>
