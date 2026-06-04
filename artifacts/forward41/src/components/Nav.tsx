@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import logoImg from "../assets/logo-transparent.png";
 
 export default function Nav() {
@@ -108,8 +109,15 @@ export default function Nav() {
       </div>
 
       {/* Mobile drawer */}
-      {menuOpen && (
-        <div className="md:hidden bg-background border-t border-border shadow-md">
+      <AnimatePresence initial={false}>
+        {menuOpen && (
+        <motion.div
+          className="md:hidden bg-background border-t border-border shadow-md overflow-hidden"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.22, ease: "easeInOut" }}
+        >
           <div className="px-7 pt-4 pb-6 flex flex-col">
 
             {/* Nav links */}
@@ -168,8 +176,9 @@ export default function Nav() {
             </button>
 
           </div>
-        </div>
-      )}
+        </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
