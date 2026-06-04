@@ -61,7 +61,7 @@ export default function MeetSarah() {
 
           {/* Left */}
           <motion.div
-            className="space-y-7 pb-16 md:pb-24"
+            className="space-y-6 pb-16 md:pb-24"
             initial="hidden"
             animate="visible"
             variants={stagger}
@@ -81,14 +81,14 @@ export default function MeetSarah() {
             </motion.h1>
             <motion.p
               variants={fadeIn}
-              className="text-muted-foreground text-lg leading-relaxed max-w-md"
+              className="text-foreground/70 text-lg leading-relaxed max-w-md"
             >
               Founder of Forward 41 and coach helping people move through stuckness,
               self-doubt, and transition with clarity, confidence, and purpose.
             </motion.p>
             <motion.p
               variants={fadeIn}
-              className="text-muted-foreground text-base leading-relaxed max-w-md"
+              className="text-foreground/65 text-base leading-relaxed max-w-md"
             >
               Forward 41 was created for people who are ready to pause, reflect, and begin
               moving forward with more intention. My work is about helping you see what feels
@@ -146,10 +146,10 @@ export default function MeetSarah() {
       </section>
 
       {/* ── Story ────────────────────────────────────────────── */}
-      <section className="py-24 px-6" style={{ backgroundColor: "#f5f2ee" }}>
+      <section className="py-16 px-6" style={{ backgroundColor: "#f5f2ee" }}>
         <div className="max-w-3xl mx-auto">
           <motion.div
-            className="space-y-7"
+            className="space-y-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -168,9 +168,15 @@ export default function MeetSarah() {
             >
               Why Forward 41 Exists
             </motion.h2>
+            {/* decorative rule */}
             <motion.div
               variants={fadeIn}
-              className="space-y-5 text-muted-foreground text-lg leading-relaxed"
+              className="w-12 h-0.5"
+              style={{ backgroundColor: "#52796F" }}
+            />
+            <motion.div
+              variants={fadeIn}
+              className="space-y-4 text-foreground/70 text-lg leading-relaxed max-w-2xl"
             >
               <p>
                 Forward 41 was created from a simple belief: change becomes possible when
@@ -189,10 +195,10 @@ export default function MeetSarah() {
       </section>
 
       {/* ── Approach cards ───────────────────────────────────── */}
-      <section className="py-24 px-6 bg-background">
+      <section className="py-16 px-6 bg-background">
         <div className="max-w-5xl mx-auto">
           <motion.div
-            className="space-y-12"
+            className="space-y-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -220,8 +226,11 @@ export default function MeetSarah() {
                   key={card.label}
                   variants={fadeIn}
                   custom={i}
-                  className="p-8 rounded-sm space-y-4"
-                  style={{ backgroundColor: "#f5f2ee" }}
+                  className="p-7 rounded-sm space-y-3 border-l-2 flex flex-col"
+                  style={{
+                    backgroundColor: "#f5f2ee",
+                    borderColor: "#52796F",
+                  }}
                 >
                   <p
                     className="text-xs font-bold tracking-widest text-primary uppercase"
@@ -230,7 +239,7 @@ export default function MeetSarah() {
                     0{i + 1}
                   </p>
                   <h3 className="font-serif text-2xl text-foreground">{card.label}</h3>
-                  <p className="text-muted-foreground leading-relaxed text-base">
+                  <p className="text-foreground/70 leading-relaxed text-base">
                     {card.body}
                   </p>
                 </motion.div>
@@ -241,11 +250,11 @@ export default function MeetSarah() {
       </section>
 
       {/* ── What to Expect ───────────────────────────────────── */}
-      <section className="py-24 px-6" style={{ backgroundColor: "#EDEDE9" }}>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+      <section className="py-16 px-6" style={{ backgroundColor: "#EDEDE9" }}>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
 
           <motion.div
-            className="space-y-6"
+            className="space-y-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -264,10 +273,15 @@ export default function MeetSarah() {
             >
               What It Feels Like to Work With Me
             </motion.h2>
+            <motion.div
+              variants={fadeIn}
+              className="w-12 h-0.5"
+              style={{ backgroundColor: "#52796F" }}
+            />
           </motion.div>
 
           <motion.ul
-            className="space-y-5 pt-2 md:pt-14"
+            className="space-y-4 md:pt-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -277,7 +291,7 @@ export default function MeetSarah() {
               <motion.li
                 key={item}
                 variants={fadeIn}
-                className="flex items-start gap-4 text-muted-foreground text-lg leading-relaxed"
+                className="flex items-start gap-4 text-foreground/75 text-base leading-relaxed border-b border-foreground/10 pb-4 last:border-0 last:pb-0"
               >
                 <span
                   className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
@@ -292,10 +306,10 @@ export default function MeetSarah() {
       </section>
 
       {/* ── Background ───────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-background">
+      <section className="py-16 px-6 bg-background">
         <div className="max-w-3xl mx-auto">
           <motion.div
-            className="space-y-7"
+            className="space-y-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -314,9 +328,14 @@ export default function MeetSarah() {
             >
               A Thoughtful, Structured Way Forward
             </motion.h2>
+            <motion.div
+              variants={fadeIn}
+              className="w-12 h-0.5"
+              style={{ backgroundColor: "#52796F" }}
+            />
             <motion.p
               variants={fadeIn}
-              className="text-muted-foreground text-lg leading-relaxed"
+              className="text-foreground/70 text-lg leading-relaxed"
             >
               With a background in psychology, coaching, and personal development, I bring a
               thoughtful and structured approach to helping people grow with clarity and
@@ -327,7 +346,7 @@ export default function MeetSarah() {
       </section>
 
       {/* ── Final CTA ────────────────────────────────────────── */}
-      <section className="py-24 px-6 text-white" style={{ backgroundColor: "#2F3E46" }}>
+      <section className="py-20 px-6 text-white" style={{ backgroundColor: "#2F3E46" }}>
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
             className="space-y-6"
@@ -344,7 +363,7 @@ export default function MeetSarah() {
             </motion.h2>
             <motion.p
               variants={fadeIn}
-              className="text-white/70 text-lg leading-relaxed max-w-lg mx-auto"
+              className="text-white/75 text-lg leading-relaxed max-w-lg mx-auto"
             >
               Explore the Forward 41 coaching pathways or book a call to find the right
               starting point for you.
