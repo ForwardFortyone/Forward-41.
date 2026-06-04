@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import Nav from "../components/Nav";
@@ -7,12 +8,12 @@ import Footer from "../components/Footer";
 import ScrollWidgets from "../components/ScrollWidgets";
 import sarahImg from "@assets/img1778926366379_1780427260602.jpg";
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.15 } },
 };
