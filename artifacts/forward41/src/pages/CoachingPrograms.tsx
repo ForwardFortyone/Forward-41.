@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -14,7 +15,7 @@ import imgAligned from "@assets/4_1780333753793.png";
 import imgUnstoppable from "@assets/5_1780333753793.png";
 import imgFree from "@assets/6_1780333753794.png";
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
@@ -128,7 +129,7 @@ export default function CoachingPrograms() {
             <h1 className="font-serif text-5xl md:text-6xl text-white leading-tight">
               Coaching Programs
             </h1>
-            <p className="text-white/70 text-lg leading-relaxed max-w-md">
+            <p className="text-white/80 text-lg leading-relaxed max-w-md">
               Six structured self-paced programs designed to help you build clarity, confidence, and meaningful change — one challenge at a time.
             </p>
             <a
@@ -144,7 +145,7 @@ export default function CoachingPrograms() {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      <section className="py-14 px-6 max-w-7xl mx-auto">
         <motion.div
           className="max-w-3xl space-y-5"
           initial="hidden"
@@ -152,10 +153,11 @@ export default function CoachingPrograms() {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <h2 className="font-serif text-4xl md:text-5xl leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl leading-tight text-foreground">
             Begin a new chapter in your growth
           </h2>
-          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+          <div className="w-12 h-0.5" style={{ backgroundColor: "#52796F" }} />
+          <div className="space-y-4 text-foreground/70 text-lg leading-relaxed">
             <p>
               The I AM series are practical, self-paced coaching programs built around one clear focus each — so you can go deep on what matters most right now.
             </p>
@@ -167,7 +169,7 @@ export default function CoachingPrograms() {
       </section>
 
       {/* Programs Grid */}
-      <section id="programs-section" className="pb-28 px-6">
+      <section id="programs-section" className="pb-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {programs.map((program, i) => (
             <motion.div
@@ -194,7 +196,7 @@ export default function CoachingPrograms() {
                   <h3 className="font-serif text-2xl text-foreground leading-snug">{program.title}</h3>
                 </div>
 
-                <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+                <p className="text-foreground/65 text-sm leading-relaxed flex-1">
                   {program.description}
                 </p>
 
@@ -225,7 +227,7 @@ export default function CoachingPrograms() {
         >
           <p className="text-xs font-bold tracking-widest text-white/50 uppercase">Private Coaching</p>
           <h2 className="font-serif text-4xl md:text-5xl leading-tight">Looking for one-on-one support?</h2>
-          <p className="text-white/70 text-lg leading-relaxed">
+          <p className="text-white/80 text-lg leading-relaxed">
             Work with Sarah in a private coaching space — explore the Break Free, Break Through, and Become pathways.
           </p>
           <button
@@ -238,7 +240,7 @@ export default function CoachingPrograms() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             key={activeTestimonial}
@@ -253,7 +255,7 @@ export default function CoachingPrograms() {
             </p>
             <div className="space-y-1">
               <p className="font-semibold text-sm tracking-wide text-foreground">{testimonials[activeTestimonial].name}</p>
-              <p className="text-sm text-muted-foreground">{testimonials[activeTestimonial].role}</p>
+              <p className="text-sm text-foreground/55">{testimonials[activeTestimonial].role}</p>
             </div>
           </motion.div>
 

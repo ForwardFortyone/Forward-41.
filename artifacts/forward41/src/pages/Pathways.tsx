@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -8,7 +9,7 @@ import Footer from "../components/Footer";
 import ScrollWidgets from "../components/ScrollWidgets";
 import treeImg from "@assets/4_1778774206980.png";
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
@@ -130,7 +131,7 @@ export default function Pathways() {
             <p className="font-serif text-2xl italic text-white/70">
               Break Free. Break Through. Become.<span className="not-italic" style={{fontSize:"0.75em", verticalAlign:"text-top", lineHeight:1}}>™</span>
             </p>
-            <p className="text-white/70 text-lg leading-relaxed max-w-md">
+            <p className="text-white/80 text-lg leading-relaxed max-w-md">
               Private one-on-one coaching designed to meet you where you are and move you toward the life you are ready to build.
             </p>
             <button
@@ -144,7 +145,7 @@ export default function Pathways() {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      <section className="py-14 px-6 max-w-7xl mx-auto">
         <motion.div
           className="max-w-3xl space-y-5"
           initial="hidden"
@@ -152,10 +153,11 @@ export default function Pathways() {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <h2 className="font-serif text-4xl md:text-5xl leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl leading-tight text-foreground">
             Private coaching for the moments you're ready to move forward
           </h2>
-          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+          <div className="w-12 h-0.5" style={{ backgroundColor: "#52796F" }} />
+          <div className="space-y-4 text-foreground/70 text-lg leading-relaxed">
             <p>
               Whether you need one focused conversation or a deeper coaching journey, each pathway is designed to meet you where you are and help you move forward with clarity, confidence, and purpose.
             </p>
@@ -167,7 +169,7 @@ export default function Pathways() {
       </section>
 
       {/* Pathways Cards */}
-      <section id="pathways-section" className="pb-20 px-6 bg-[#f9f7f4] pt-20">
+      <section id="pathways-section" className="pb-16 px-6 bg-[#f9f7f4] pt-16">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-stretch">
           {plans.map((plan, i) => (
             <motion.div
@@ -194,13 +196,13 @@ export default function Pathways() {
                 <p className="font-serif text-5xl text-primary pt-2">{plan.price}</p>
               </div>
 
-              <p className="text-muted-foreground leading-relaxed mb-6">{plan.description}</p>
+              <p className="text-foreground/70 leading-relaxed mb-6">{plan.description}</p>
 
               <div className="mb-6">
-                <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-3">What's included</p>
+                <p className="text-xs font-bold tracking-widest text-foreground/50 uppercase mb-3">What's included</p>
                 <ul className="space-y-2">
                   {plan.includes.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-foreground/70">
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                       {item}
                     </li>
@@ -209,8 +211,8 @@ export default function Pathways() {
               </div>
 
               <div className="mb-8 flex-1">
-                <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-2">Best for</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{plan.bestFor}</p>
+                <p className="text-xs font-bold tracking-widest text-foreground/50 uppercase mb-2">Best for</p>
+                <p className="text-sm text-foreground/70 leading-relaxed">{plan.bestFor}</p>
               </div>
 
               <a
@@ -227,25 +229,27 @@ export default function Pathways() {
       </section>
 
       {/* Discovery Call Section */}
-      <section id="discovery-call" className="py-24 px-6 bg-[#f9f7f4] border-t border-border/40">
+      <section id="discovery-call" className="py-16 px-6 bg-[#f9f7f4] border-t border-border/40">
         <motion.div
-          className="max-w-2xl mx-auto text-center space-y-7"
+          className="max-w-2xl mx-auto text-center space-y-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <h2 className="font-serif text-4xl md:text-5xl leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl leading-tight text-foreground">
             Not sure which pathway is right for you?
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="w-12 h-0.5 mx-auto" style={{ backgroundColor: "#52796F" }} />
+          <p className="text-lg text-foreground/70 leading-relaxed">
             Book a free 30-minute discovery call to talk through where you are, what feels stuck, and which Forward 41 pathway may fit best.
-            <br /><br />
+          </p>
+          <p className="text-foreground/65 leading-relaxed">
             No pressure. No commitment. Just a clear conversation about your next step.
           </p>
           <div className="flex flex-col items-center gap-3 pt-1">
             {discoveryCallBullets.map((item) => (
-              <div key={item} className="flex items-center gap-3 text-muted-foreground">
+              <div key={item} className="flex items-center gap-3 text-foreground/70">
                 <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: "#52796F" }} />
                 {item}
               </div>
@@ -266,7 +270,7 @@ export default function Pathways() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             key={activeTestimonial}
@@ -281,7 +285,7 @@ export default function Pathways() {
             </p>
             <div className="space-y-1">
               <p className="font-semibold text-sm tracking-wide text-foreground">{testimonials[activeTestimonial].name}</p>
-              <p className="text-sm text-muted-foreground">{testimonials[activeTestimonial].role}</p>
+              <p className="text-sm text-foreground/55">{testimonials[activeTestimonial].role}</p>
             </div>
           </motion.div>
 
@@ -308,7 +312,7 @@ export default function Pathways() {
         >
           <p className="text-xs font-bold tracking-widest text-white/50 uppercase">Ready to Begin?</p>
           <h2 className="font-serif text-4xl md:text-5xl leading-tight">Take the first step today</h2>
-          <p className="text-white/70 text-lg leading-relaxed">
+          <p className="text-white/80 text-lg leading-relaxed">
             Book a free 30-minute discovery call to find out which pathway is right for you.
           </p>
           <a
